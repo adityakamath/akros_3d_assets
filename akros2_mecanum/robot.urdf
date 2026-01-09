@@ -6,13 +6,10 @@
 <robot name="akros2_mecanum">
   <!-- All values below are based on the CAD model (Fusion 360). 2mm added on each side (4mm total) for length and width (but not height) as padding. -->
   <!-- colors from https://gist.github.com/naoki-mizuno/5e63a13597d5c5fe817c1600b829595e -->
-  <material name="SensorColor">
-    <color rgba="0.025 0.05 0.05 1.0" /> <!-- almostblack -->
+  <material name="WheelSensorColor">
+    <color rgba="0.15 0.15 0.15 1.0" /> <!-- charcoal / dark grey-->
   </material>
-  <material name="WheelsNavColor">
-     <color rgba="0.15 0.15 0.15 1.0" /> <!-- charcoal / dark grey-->
-  </material>
-  <material name="BaseLinkColor">
+  <material name="BaseNavColor">
     <color rgba="0.8 0.8 0.8 1.0" /> <!-- light grey -->
   </material>
   <!-- WHEEL_LF TRANSMISSION -->
@@ -184,7 +181,7 @@
       <geometry>
         <mesh filename="base_module.stl"/>
       </geometry>
-      <material name="BaseLinkColor"/>
+      <material name="BaseNavColor"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.003 0 0.0495"/>
@@ -214,7 +211,7 @@
       <geometry>
         <mesh filename="navigation_module.stl"/>
       </geometry>
-      <material name="WheelsNavColor"/>
+      <material name="BaseNavColor"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.015325"/>
@@ -235,7 +232,7 @@
       <geometry>
         <mesh filename="ld06.stl"/>
       </geometry>
-      <material name="SensorColor"/>
+      <material name="WheelSensorColor"/>
     </visual>
     <collision>
       <origin rpy="0 0 -1.5707963" xyz="0 0 0.0165"/>
@@ -258,7 +255,7 @@
       <geometry>
         <mesh filename="cam_module.stl"/>
       </geometry>
-      <material name="SensorColor"/>
+      <material name="WheelSensorColor"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.00805 0 0"/>
@@ -282,7 +279,7 @@
       <geometry>
         <mesh filename="wheel_lf.stl"/>
       </geometry>
-      <material name="WheelsNavColor"/>
+      <material name="WheelSensorColor"/>
     </visual>
     <collision>
       <origin rpy="1.5707963 0 0" xyz="0 0.017 0"/>
@@ -302,7 +299,7 @@
       <geometry>
         <mesh filename="wheel_lb.stl"/>
       </geometry>
-      <material name="WheelsNavColor"/>
+      <material name="WheelSensorColor"/>
     </visual>
     <collision>
       <origin rpy="1.5707963 0 0" xyz="0 0.017 0"/>
@@ -322,7 +319,7 @@
       <geometry>
         <mesh filename="wheel_rf.stl"/>
       </geometry>
-      <material name="WheelsNavColor"/>
+      <material name="WheelSensorColor"/>
     </visual>
     <collision>
       <origin rpy="1.5707963 0 0" xyz="0 -0.017 0"/>
@@ -342,7 +339,7 @@
       <geometry>
         <mesh filename="wheel_rb.stl"/>
       </geometry>
-      <material name="WheelsNavColor"/>
+      <material name="WheelSensorColor"/>
     </visual>
     <collision>
       <origin rpy="1.5707963 0 0" xyz="0 -0.017 0"/>
